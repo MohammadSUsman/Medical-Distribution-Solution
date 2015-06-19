@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSales" targetNamespace="http://tempuri.org/DSSales.xsd" xmlns:mstns="http://tempuri.org/DSSales.xsd" xmlns="http://tempuri.org/DSSales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSSales" msprop:Generator_DataSetName="DSSales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Sales" msprop:Generator_UserTableName="Sales" msprop:Generator_RowDeletedName="SalesRowDeleted" msprop:Generator_TableClassName="SalesDataTable" msprop:Generator_RowChangedName="SalesRowChanged" msprop:Generator_RowClassName="SalesRow" msprop:Generator_RowChangingName="SalesRowChanging" msprop:Generator_RowEvArgName="SalesRowChangeEvent" msprop:Generator_RowEvHandlerName="SalesRowChangeEventHandler" msprop:Generator_TablePropName="Sales" msprop:Generator_TableVarName="tableSales" msprop:Generator_RowDeletingName="SalesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SaleID" msprop:Generator_UserColumnName="SaleID" msprop:Generator_ColumnPropNameInRow="SaleID" msprop:Generator_ColumnVarNameInTable="columnSaleID" msprop:Generator_ColumnPropNameInTable="SaleIDColumn" type="xs:int" />
+              <xs:element name="SaleDateAndTime" msprop:Generator_UserColumnName="SaleDateAndTime" msprop:Generator_ColumnPropNameInRow="SaleDateAndTime" msprop:Generator_ColumnVarNameInTable="columnSaleDateAndTime" msprop:Generator_ColumnPropNameInTable="SaleDateAndTimeColumn" type="xs:dateTime" />
+              <xs:element name="CustomerID" msprop:Generator_UserColumnName="CustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sales" />
+      <xs:field xpath="mstns:SaleID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

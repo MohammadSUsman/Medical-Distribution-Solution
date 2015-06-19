@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMedicine" targetNamespace="http://tempuri.org/DSMedicine.xsd" xmlns:mstns="http://tempuri.org/DSMedicine.xsd" xmlns="http://tempuri.org/DSMedicine.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMedicine" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSMedicine" msprop:Generator_DataSetName="DSMedicine">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Medicine" msprop:Generator_UserTableName="Medicine" msprop:Generator_RowDeletedName="MedicineRowDeleted" msprop:Generator_TableClassName="MedicineDataTable" msprop:Generator_RowChangedName="MedicineRowChanged" msprop:Generator_RowClassName="MedicineRow" msprop:Generator_RowChangingName="MedicineRowChanging" msprop:Generator_RowEvArgName="MedicineRowChangeEvent" msprop:Generator_RowEvHandlerName="MedicineRowChangeEventHandler" msprop:Generator_TablePropName="Medicine" msprop:Generator_TableVarName="tableMedicine" msprop:Generator_RowDeletingName="MedicineRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MedicineName" msprop:Generator_UserColumnName="MedicineName" msprop:Generator_ColumnPropNameInRow="MedicineName" msprop:Generator_ColumnVarNameInTable="columnMedicineName" msprop:Generator_ColumnPropNameInTable="MedicineNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Salt" msprop:Generator_UserColumnName="Salt" msprop:Generator_ColumnPropNameInRow="Salt" msprop:Generator_ColumnVarNameInTable="columnSalt" msprop:Generator_ColumnPropNameInTable="SaltColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Strength" msprop:Generator_UserColumnName="Strength" msprop:Generator_ColumnPropNameInRow="Strength" msprop:Generator_ColumnVarNameInTable="columnStrength" msprop:Generator_ColumnPropNameInTable="StrengthColumn" type="xs:int" />
+              <xs:element name="CompanyID" msprop:Generator_UserColumnName="CompanyID" msprop:Generator_ColumnPropNameInRow="CompanyID" msprop:Generator_ColumnVarNameInTable="columnCompanyID" msprop:Generator_ColumnPropNameInTable="CompanyIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInTable="TypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

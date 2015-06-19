@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E4A6F5A-56B3-4C73-BB9C-2B2F402676B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Medcine_ManagmentSystem</RootNamespace>
+    <AssemblyName>Medcine_ManagmentSystem</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Company.cs" />
+    <Compile Include="CompanyPayment.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerRecipit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRecipit.Designer.cs">
+      <DependentUpon>CustomerRecipit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerRecpit.cs" />
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsCompany.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompany.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCompanyPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCompanyPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCustomerRecipit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCustomerRecipit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMedicine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMedicine.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPurchase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPurchase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompanyPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompanyPayment.Designer.cs">
+      <DependentUpon>frmCompanyPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedicine.Designer.cs">
+      <DependentUpon>frmMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurchase.Designer.cs">
+      <DependentUpon>frmPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicine.cs" />
+    <Compile Include="MedicineDetails.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomerRecipit.resx">
+      <DependentUpon>CustomerRecipit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompanyPayment.resx">
+      <DependentUpon>frmCompanyPayment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedicine.resx">
+      <DependentUpon>frmMedicine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPurchase.resx">
+      <DependentUpon>frmPurchase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewr.resx">
+      <DependentUpon>ReportViewr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptCompany.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCompany.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCompanyPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCompanyPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCusotmer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCusotmer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCustomerRecipit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCustomerRecipit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptMedicine.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMedicine.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPurchase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPurchase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Purches.cs" />
+    <Compile Include="PurchesDetails.cs" />
+    <Compile Include="ReportViewr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewr.Designer.cs">
+      <DependentUpon>ReportViewr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptCompany.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCompany.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCompanyPayment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCompanyPayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCusotmer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCusotmer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCustomerRecipit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCustomerRecipit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptMedicine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMedicine.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPurchase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPurchase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sales.cs" />
+    <Compile Include="SalesDetail.cs" />
+    <Compile Include="TRawImage.cs" />
+    <Compile Include="TTemplate.cs" />
+    <Compile Include="UserLogin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header_Life-Sciences590x180.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-pharma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_matters_header.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Life_Sciences_Header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MI_Markets_Pharma_720x300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pharma_Image_header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\promed-medical-surgical-pharma-website-design-header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\services_header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpayment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crecipit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6482367-ampules-filled-with-medicine-and-ekg-in-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpapers_7636.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salebtn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company_profile1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compypayment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-payment-processing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Credit-cards.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales-negotiating.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medicine_Main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerRetention.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomerRec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales graphic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customersres.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iMedicine_Wallpaper_by_CrazyDoctor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimalistic-medicine_00337517.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxGrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="GrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dsCompany.xsc">
+      <DependentUpon>dsCompany.xsd</DependentUpon>
+    </None>
+    <None Include="dsCompany.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompany.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCompany.xss">
+      <DependentUpon>dsCompany.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\clean_web_2_0_login_form_by_azmind-d4mj4ds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSCompanyPayment.xsc">
+      <DependentUpon>DSCompanyPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DSCompanyPayment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCompanyPayment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCompanyPayment.xss">
+      <DependentUpon>DSCompanyPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DSCustomer.xsc">
+      <DependentUpon>DSCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DSCustomer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCustomer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCustomer.xss">
+      <DependentUpon>DSCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DSCustomerRecipit.xsc">
+      <DependentUpon>DSCustomerRecipit.xsd</DependentUpon>
+    </None>
+    <None Include="DSCustomerRecipit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCustomerRecipit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCustomerRecipit.xss">
+      <DependentUpon>DSCustomerRecipit.xsd</DependentUpon>
+    </None>
+    <None Include="DSMedicine.xsc">
+      <DependentUpon>DSMedicine.xsd</DependentUpon>
+    </None>
+    <None Include="DSMedicine.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMedicine.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSMedicine.xss">
+      <DependentUpon>DSMedicine.xsd</DependentUpon>
+    </None>
+    <None Include="DSPurchase.xsc">
+      <DependentUpon>DSPurchase.xsd</DependentUpon>
+    </None>
+    <None Include="DSPurchase.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPurchase.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPurchase.xss">
+      <DependentUpon>DSPurchase.xsd</DependentUpon>
+    </None>
+    <None Include="DSSales.xsc">
+      <DependentUpon>DSSales.xsd</DependentUpon>
+    </None>
+    <None Include="DSSales.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSales.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSSales.xss">
+      <DependentUpon>DSSales.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\dark-minimalist-black-grill-textures-424723.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

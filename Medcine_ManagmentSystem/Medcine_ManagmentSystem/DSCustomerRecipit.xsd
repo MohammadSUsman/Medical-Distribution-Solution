@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCustomerRecipit" targetNamespace="http://tempuri.org/DSCustomerRecipit.xsd" xmlns:mstns="http://tempuri.org/DSCustomerRecipit.xsd" xmlns="http://tempuri.org/DSCustomerRecipit.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCustomerRecipit" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSCustomerRecipit" msprop:Generator_DataSetName="DSCustomerRecipit">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CustomerRecipit" msprop:Generator_UserTableName="CustomerRecipit" msprop:Generator_RowDeletedName="CustomerRecipitRowDeleted" msprop:Generator_TableClassName="CustomerRecipitDataTable" msprop:Generator_RowChangedName="CustomerRecipitRowChanged" msprop:Generator_RowClassName="CustomerRecipitRow" msprop:Generator_RowChangingName="CustomerRecipitRowChanging" msprop:Generator_RowEvArgName="CustomerRecipitRowChangeEvent" msprop:Generator_RowEvHandlerName="CustomerRecipitRowChangeEventHandler" msprop:Generator_TablePropName="CustomerRecipit" msprop:Generator_TableVarName="tableCustomerRecipit" msprop:Generator_RowDeletingName="CustomerRecipitRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VoucherID" msprop:Generator_UserColumnName="VoucherID" msprop:Generator_ColumnPropNameInRow="VoucherID" msprop:Generator_ColumnVarNameInTable="columnVoucherID" msprop:Generator_ColumnPropNameInTable="VoucherIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateAndTime" msprop:Generator_UserColumnName="DateAndTime" msprop:Generator_ColumnPropNameInRow="DateAndTime" msprop:Generator_ColumnVarNameInTable="columnDateAndTime" msprop:Generator_ColumnPropNameInTable="DateAndTimeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_UserColumnName="Amount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInTable="AmountColumn" type="xs:int" />
+              <xs:element name="CompanyId" msprop:Generator_UserColumnName="CompanyId" msprop:Generator_ColumnPropNameInRow="CompanyId" msprop:Generator_ColumnVarNameInTable="columnCompanyId" msprop:Generator_ColumnPropNameInTable="CompanyIdColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
